@@ -1,0 +1,37 @@
+import statistics
+import numpy
+import numpy as np
+
+heights = [62.5, 68, 70, 71, 71, 72, 73, 73, 74]
+
+mean = statistics.mean(heights)
+median = statistics.median(heights)
+mode = statistics.multimode(heights)
+
+
+#sept 10
+ 
+# First quartile (Q1)
+Q1 = np.median(heights[:4])
+
+# Second quartile (Q2)
+Q2 = np.median(heights[4])
+  
+# Third quartile (Q3)
+Q3 = np.median(heights[5:])
+
+  
+# Interquartile range (IQR)
+IQR = Q3 - Q1
+print(Q1,Q3," The quartile 3 and 1")  
+print(IQR," the interquartile range.")
+
+height = heights.index(float(input()))
+height= height+1
+
+percentile = height/9 
+percentileRank = percentile * 100
+
+
+
+print(f"The mean of the heights is {mean}\nThe median of the heights is {median}\nFinally the mode of the heights is {mode}\nThe perncitale rank is {percentileRank}%")
